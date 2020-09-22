@@ -12,7 +12,7 @@
       state: absent
 
   - name: change chrony config
-    command: augtool set /files/etc/chrony.conf/server[1] "{{ ntpserver  }}"
+    command: augtool set /files/etc/chrony.conf/server[1] {{ ntpserver }}
 
   - name: change chrony config
     command: augtool set /files/etc/chrony.conf/server[1]/iburst
